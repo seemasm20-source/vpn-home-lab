@@ -1,2 +1,13 @@
-# vpn-home-lab
-IT Support VPN labs with real-world troubleshooting workflows, network diagnostics, authentication testing, DNS verification, and connectivity issue resolution.
+
+
+**Portfolio:** IT Help Desk Tier 1 & 2 — VPN TROUBLESHOOTING PORTFOLIO
+
+**Tool:** Windows 10/11 — Cisco AnyConnect / Windows VPN
+
+**Author:** Seema
+
+**Date:**  2026
+
+
+
+
