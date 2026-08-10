@@ -36,9 +36,8 @@
 
 ### Phase 5 - Connected
 
-Internal resources now accessible
-
-
+- VPN connection is successfully established.
+- Authorized internal company resources are now accessible.
 
 
 
