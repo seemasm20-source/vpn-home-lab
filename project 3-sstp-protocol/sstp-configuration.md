@@ -22,9 +22,9 @@ Configure a Secure Socket Tunneling Protocol (SSTP) VPN between an Azure-hosted 
 3. Verify that the server is accessible through Remote Desktop Protocol (RDP).
 4. Confirm the server hostname and domain configuration.
 
-**Existing lab server:** `server2021`
+**Existing lab server:** [Click here to view my Windows Server Azure project](https://github.com/seemasm20-source/Windows-Server-Azure-AD/tree/main/Windows%20Server%20Azure)
 
-> Reuse the existing Windows Server VM rather than creating another one, provided it meets the lab requirements.
+
 
 ## Step 2: Install the Remote Access Role
 
