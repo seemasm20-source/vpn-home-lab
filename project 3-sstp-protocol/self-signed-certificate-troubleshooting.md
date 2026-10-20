@@ -3,7 +3,7 @@
 
 ## Problem Summary
 
-**Symptom:** The SSTP VPN connection fails because the Windows client does not trust the server's self-signed certificate.
+The SSTP VPN connection fails because the Windows client does not trust the server's self-signed certificate.
 
 **Cause:** A self-signed certificate is not automatically trusted by Windows. The client must trust the certificate, and the certificate must be valid for the VPN server's hostname.
 
@@ -24,7 +24,7 @@
 
 ### Step 3: Select the Certificate Store
 
-1. Select **Current User**.
+1. Select **Choose Local Machine **.
 2. Click **Next**.
 
 This installs the certificate for the current Windows user and usually avoids requiring administrator privileges.
@@ -55,16 +55,6 @@ This installs the certificate for the current Windows user and usually avoids re
 
 The client trusts the imported certificate, provided the certificate is valid and matches the VPN server's hostname. The SSTP VPN connection should then proceed if the other VPN settings are correct.
 
-## If the VPN Still Fails
-
-Check the following:
-
-* The certificate's Subject Alternative Name (SAN) contains the VPN server's DNS name, such as `server2021.seemaenterprise.co.in`.
-* The certificate includes the **Server Authentication** Extended Key Usage.
-* The VPN profile's server address matches the certificate's hostname.
-* The certificate is within its validity period.
-* TCP port `443` is allowed through the Azure Network Security Group and Windows Firewall.
-* RRAS is configured to use the correct server certificate.
 
 ## Security Notes
 
