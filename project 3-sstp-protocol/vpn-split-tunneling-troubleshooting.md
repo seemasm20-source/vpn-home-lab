@@ -1,4 +1,4 @@
-# Troubleshooting: RDP Disconnects Immediately After SSTP VPN Connection
+# Troubleshooting: RDP Disconnects immediately after SSTP VPN Connection
 
 ## Problem Summary
 
