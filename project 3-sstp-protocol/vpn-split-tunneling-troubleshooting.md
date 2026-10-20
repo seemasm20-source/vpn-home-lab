@@ -2,7 +2,7 @@
 
 ## Problem Summary
 
-**Symptom:** The Remote Desktop Protocol (RDP) session freezes or disconnects immediately after the SSTP VPN status changes to **Connected**.
+  The Remote Desktop Protocol (RDP) session freezes or disconnects immediately after the SSTP VPN status changes to **Connected**.
 
 **Possible Cause:** The VPN connection is configured to use the remote network's default gateway. This can change the client's network routing and interrupt the existing RDP connection.
 
