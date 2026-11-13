@@ -1,100 +1,145 @@
 
- ## 🔀 VPN Types
+# 🔀 VPN Types
 
+VPNs are grouped by what they connect, and by whether the user needs software. Knowing the type tells a technician where to look when a connection fails.
 
-  ## 1. Remote Access VPN
+---
 
-   Remote Access Virtual Private Network (VPN)** is a network architecture that establishes a temporary, secure, and encrypted tunnel between an individual remote client device
-   
-   (such as a laptop, desktop, or mobile device) and a private corporate or home network over an untrusted public network (like the Internet).
+## 1. Remote Access VPN
 
-                                        Home Laptop
-                                           │
-                                       Internet
-                                          │
-                                       VPN Tunnel
-                                          │
-                                    Company Office (LAN)
+A **remote access VPN** creates a temporary, secure and encrypted tunnel between one remote device, such as a laptop, desktop or phone, and a private company network, across an untrusted network like the internet.
 
-  
-           Used by: Corporate remote workers, travelling employees  → Client software required on each device
-
-
-
-  ## 2. Site-to-Site VPN
-
-     A Site-to-Site (S2S) VPN connects two entire networks across the public Internet, bridging them so they function like a single secure private network.
-
-     Branch Office LAN ←→ VPN Tunnel ←→ Head Office LAN(Configured on routers - no client software on PCs)
-
-    
 ```text
-          Internet
-             │
-      Encrypted VPN Tunnel
-             │
-┌──────────────────┐      ┌──────────────────┐
-│ Office A         │──────│ Office B         │
-│ 192.168.1.0/24   │      │ 10.0.0.0/24      │
-└──────────────────┘      └──────────────────┘
+Home laptop
+    │
+ Internet
+    │
+VPN tunnel
+    │
+Company office (LAN)
 ```
 
+| | Detail |
+|---|--------|
+| **Used by** | Remote workers and travelling employees |
+| **Client software** | Required on each device |
+| **Connects** | One device to a network |
+| **Azure name** | Point-to-Site (P2S) VPN |
 
+---
 
-## 3. Client VPN vs Clientless VPN
+## 2. Site-to-Site VPN
 
+A **site-to-site (S2S) VPN** connects two entire networks across the internet, so they work like one private network. Users do not install anything, because the tunnel is built between network devices.
 
-| Client VPN                                               | Clientless VPN                                        |
-| -------------------------------------------------------- | ----------------------------------------------------- |
-| Requires a VPN application                               | No VPN application required                           |
-| User installs VPN software                               | User uses a web browser                               |
-| Full network access                                      | Limited access to specific web applications           |
-| Suitable for employees                                   | Suitable for vendors, contractors, or temporary users |
-| Example: Cisco Secure Client, Wireguard, GlobalProtect   | Example: SSL VPN Portal accessed through a browser    |
+```text
+┌──────────────────┐                          ┌──────────────────┐
+│ Branch office    │ ◄══ Encrypted tunnel ══► │ Head office      │
+│ 192.168.1.0/24   │       over the internet  │ 10.0.0.0/24      │
+└──────────────────┘                          └──────────────────┘
+```
 
-## Client VPN
+| | Detail |
+|---|--------|
+| **Used by** | Branch offices, head offices, an office connected to a cloud network such as an Azure virtual network |
+| **Client software** | None on the PCs |
+| **Configured on** | Routers, firewalls or VPN gateways, such as Azure VPN Gateway |
+| **Connects** | Two networks |
+
+> The two networks must use **different address ranges**. If both offices use `192.168.1.0/24`, traffic cannot be routed between them.
+
+### Remote Access and Site-to-Site Compared
+
+| | Remote access VPN | Site-to-site VPN |
+|---|-------------------|------------------|
+| **Connects** | One device to a network | Two networks to each other |
+| **Client software** | Yes | No |
+| **Tunnel is** | Started by the user when needed | Usually always on |
+| **Typical ticket** | "I cannot connect from home" | "The branch office cannot reach the head office" |
+
+---
+
+## 3. Client VPN and Clientless VPN
+
+| | Client VPN | Clientless VPN |
+|---|-----------|----------------|
+| **Software** | Requires a VPN application | No VPN application |
+| **How the user connects** | Installs and runs the VPN software | Uses a web browser |
+| **Access** | Network access, as allowed by company policy | Limited to specific web applications |
+| **Suitable for** | Employees | Vendors, contractors or temporary users |
+| **Examples** | Cisco Secure Client, WireGuard, GlobalProtect | An SSL VPN portal opened in a browser |
+
+### Client VPN
 
 ```text
 Laptop
    │
-Cisco Secure Client
+VPN client (for example Cisco Secure Client)
    │
-Encrypted VPN Tunnel
+Encrypted VPN tunnel
    │
-Company VPN Server
+Company VPN server
    │
-Company Network
+Company network
 ```
 
-## Clientless VPN
+### Clientless VPN
 
 ```text
 Laptop
    │
-Chrome / Edge
+Browser (Chrome or Edge)
    │
 HTTPS
    │
-SSL VPN Portal
+SSL VPN portal
    │
-Internal Web Applications
+Internal web applications
 ```
 
+> A client VPN gives access to whatever the administrator allows, which may be the whole network or only some subnets. A clientless VPN is limited to the web applications listed on its portal.
 
+---
 
-## VPN by Protocol
+## 🔒 VPN by Protocol
 
-SSL/TLS VPN  → port 443 - Works through most firewalls
+| Protocol | Ports | Notes |
+|----------|-------|-------|
+| **SSL/TLS VPN** | TCP 443 | Passes most firewalls |
+| **IPsec (IKEv2)** | UDP 500 and 4500 | Very secure, and reconnects well |
+| **OpenVPN** | UDP 1194 or TCP 443 | Flexible and open source |
+| **WireGuard** | UDP 51820 (common, can be changed) | Modern, fast and simple |
 
-IPSec VPN    → UDP 500/4500 - Very secure
+For details on each protocol, see [VPN Protocols](./vpn-protocols.md).
 
-OpenVPN      → UDP 1194 or TCP 443
+---
 
-WireGuard    → modern - Very fast
+## 💡 Next Step
 
-
-
-
+→ [VPN Protocols](./vpn-protocols.md)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
 
