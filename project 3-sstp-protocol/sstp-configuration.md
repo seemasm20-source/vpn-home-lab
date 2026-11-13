@@ -4,16 +4,18 @@
 
 Configure a Secure Socket Tunneling Protocol (SSTP) VPN between an Azure-hosted Windows Server and a Windows 11 client using a self-signed certificate.
 
-## Lab Environment
-
-* **Cloud Platform:** Microsoft Azure
-* **VPN Server:** Windows Server 2025 (`server2021`)
-* **VPN Client:** Windows 11
-* **Domain:** `seemaenterprise.co.in`
-* **VPN Protocol:** SSTP
-* **VPN Port:** TCP 443
-* **Certificate:** Self-signed certificate
-* **VPN Address Pool:** `10.10.10.1 – 10.10.10.10`
+| Setting | Value |
+|---------|-------|
+| **Platform** | Microsoft Azure |
+| **VPN server** | Windows Server 2025 (`server2021`) running RRAS |
+| **VPN client** | Windows 11, built-in VPN client |
+| **Domain** | `seemaenterprise.co.in` |
+| **VPN protocol and port** | SSTP, TCP 443 |
+| **Certificate** | Self-signed, friendly name `SSTP` |
+| **VPN address pool** | `10.10.10.1 – 10.10.10.10` |
+| **VPN connection name** | `SSTP_VPN_LAB` |
+| **VPN server name** | `server2021.seemaenterprise.co.in` |
+| **VPN user** | `Sam` |
 
 ## Step 1: Create the Windows Server in Azure
 
