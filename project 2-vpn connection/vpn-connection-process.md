@@ -48,6 +48,27 @@ The steps below show how a VPN connection is built, from the user clicking **Con
 
 ---
 
+
+
+## What Changes After VPN Connects
+
+ ```text
+BEFORE VPN:
+
+Ethernet: 192.168.1.50    ← Home network IP
+Gateway:  192.168.1.1     ← Home router
+DNS:      8.8.8.8         ← Public DNS
+
+
+AFTER VPN:
+
+Ethernet:    192.168.1.50 ← Home network remains connected
+VPN Adapter: 10.8.0.45   ← VPN-assigned IP
+VPN Gateway: 10.8.0.1    ← Example VPN gateway
+DNS:         10.0.0.10   ← Example company DNS
+
+Note: The VPN IP, gateway, and DNS values depend on the organization's VPN configuration. Split-tunnel and full-tunnel VPNs may route traffic differently.
+
 ## 🔄 VPN Client Connection States
 
 | State | Meaning |
