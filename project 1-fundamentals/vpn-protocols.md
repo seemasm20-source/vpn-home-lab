@@ -146,15 +146,7 @@ During connection establishment, the VPN server presents an SSL/TLS certificate 
 - Incorrect peer configuration
 - Routing problems, such as a wrong **AllowedIPs** setting
 
----
 
-## 🧰 Other Protocols You May See
-
-| Protocol | Ports | Notes |
-|----------|-------|-------|
-| **SSTP** | TCP 443 | Windows protocol that carries the VPN over HTTPS (TLS). Passes most firewalls |
-| **L2TP/IPsec** | UDP 500, 1701 and 4500 | Older, but still used. Needs a pre-shared key or a certificate |
-| **PPTP** | TCP 1723 and GRE | Outdated and **insecure**. Should not be used |
 
 ---
 
@@ -177,7 +169,7 @@ During connection establishment, the VPN server presents an SSL/TLS certificate 
 
 → [Cannot Connect to VPN](./cannot-connect-vpn.md)s
 
-f 5f<qfdFc
+
  
  
  
