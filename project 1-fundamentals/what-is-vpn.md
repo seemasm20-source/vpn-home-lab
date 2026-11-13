@@ -78,6 +78,8 @@ User's PC                                         Company network
                                                 └──────────────────────┘
 ```
 
+
+
 | Component | What it is | Examples | Main responsibilities |
 |-----------|------------|----------|-----------------------|
 | **VPN client** | Software on the user's device that starts the connection to the company's VPN server | Windows built-in VPN, Cisco Secure Client (AnyConnect), FortiClient, GlobalProtect, WireGuard, OpenVPN | Starts the connection, sends the user's credentials, builds the tunnel, encrypts and decrypts traffic |
@@ -86,23 +88,6 @@ User's PC                                         Company network
 | **VPN adapter** | A virtual network card created on the user's computer when the VPN connects | Cisco Secure Client virtual adapter, WireGuard tunnel adapter, OpenVPN TAP/TUN adapter, Windows VPN adapter | Receives an IP address from the VPN server, sends and receives the encrypted traffic, gives the PC access to the internal network |
 
 > **Troubleshooting tip:** Each component fails in its own way. If the client cannot connect at all, check the client, the server and the ports. If the credentials are rejected, check the authentication server and the account in ADUC. If the VPN connects but nothing works, check the VPN adapter, its IP address, its DNS servers and the routes.
-## 🔒 Common VPN Protocols
-
-
-
-> A VPN that cannot connect from a hotel or public Wi-Fi is often being blocked at the ports above. SSTP on TCP 443 usually gets through.
-
----
-
-## 🔀 Split Tunnel and Full Tunnel
-
-| | Split tunnel | Full tunnel |
-|---|--------------|-------------|
-| **Traffic through the VPN** | Only company traffic | All traffic |
-| **Internet speed** | Usually faster, because the internet traffic stays local | Often slower, because everything goes through the company |
-| **Security** | The company does not inspect the internet traffic | The company can inspect and filter all traffic |
-
----
 
 
 
