@@ -63,25 +63,32 @@ With VPN:      Your PC ══ Encrypted tunnel ══► VPN Server ──► Co
 
 ---
 
-## 🌐 Types of VPN
+## 🧩 VPN Components
 
-| Type | What it connects | Example |
-|------|------------------|---------|
-| **Remote access VPN** | One user's device to the company network | An employee working from home |
-| **Site-to-site VPN** | Two whole networks | A branch office to the head office, or an office to an Azure virtual network |
+A VPN connection involves four components. Each one has its own job, and knowing which one failed is the first step in troubleshooting.
 
----
+```text
+User's PC                                         Company network
+┌────────────────────────┐                      ┌──────────────────────┐
+│ VPN client             │ ══ Encrypted tunnel ══► VPN server / gateway │
+│ + VPN adapter          │                      └──────────┬───────────┘
+└────────────────────────┘                                 │ checks identity
+                                                ┌──────────▼───────────┐
+                                                │ Authentication server│
+                                                └──────────────────────┘
+```
 
+| Component | What it is | Examples | Main responsibilities |
+|-----------|------------|----------|-----------------------|
+| **VPN client** | Software on the user's device that starts the connection to the company's VPN server | Windows built-in VPN, Cisco Secure Client (AnyConnect), FortiClient, GlobalProtect, WireGuard, OpenVPN | Starts the connection, sends the user's credentials, builds the tunnel, encrypts and decrypts traffic |
+| **VPN server (gateway)** | The device or server that accepts VPN connections and gives access to the internal network | Windows Server RRAS, Azure VPN Gateway, Cisco ASA, FortiGate, Palo Alto firewall | Accepts connections, builds the tunnel, passes authentication to the authentication server, grants access to internal resources |
+| **Authentication server** | The system that verifies who the user is and whether they may connect | Active Directory (AD DS), Network Policy Server (NPS), RADIUS server, Microsoft Entra ID | Checks the username and password, validates MFA if it is enabled, confirms the user has permission, allows or denies the connection |
+| **VPN adapter** | A virtual network card created on the user's computer when the VPN connects | Cisco Secure Client virtual adapter, WireGuard tunnel adapter, OpenVPN TAP/TUN adapter, Windows VPN adapter | Receives an IP address from the VPN server, sends and receives the encrypted traffic, gives the PC access to the internal network |
+
+> **Troubleshooting tip:** Each component fails in its own way. If the client cannot connect at all, check the client, the server and the ports. If the credentials are rejected, check the authentication server and the account in ADUC. If the VPN connects but nothing works, check the VPN adapter, its IP address, its DNS servers and the routes.
 ## 🔒 Common VPN Protocols
 
-| Protocol | Notes | Ports used |
-|----------|-------|------------|
-| **IKEv2/IPsec** | Secure and fast. Reconnects well when the network changes | UDP 500 and 4500 |
-| **SSTP** | Windows protocol that runs over HTTPS, so it often passes firewalls | TCP 443 |
-| **L2TP/IPsec** | Older but still used | UDP 500, 1701 and 4500 |
-| **OpenVPN** | Open-source and widely used | UDP 1194 by default (the port can be changed) |
-| **WireGuard** | Modern, fast and simple | UDP 51820 by default (the port can be changed) |
-| **PPTP** | Outdated and **insecure**. Should not be used | TCP 1723 and GRE |
+
 
 > A VPN that cannot connect from a hotel or public Wi-Fi is often being blocked at the ports above. SSTP on TCP 443 usually gets through.
 
@@ -97,28 +104,8 @@ With VPN:      Your PC ══ Encrypted tunnel ══► VPN Server ──► Co
 
 ---
 
-## 🛠️ Most Common VPN Tickets (Tier 1 & Tier 2)
 
-| Ticket | Likely causes | What to check |
-|--------|---------------|---------------|
-| **1. Cannot connect to the VPN** | No internet, wrong credentials, locked or disabled account, expired MFA, blocked VPN ports, VPN server down | Test the internet connection, check the account in ADUC, try another network, and check whether other users can connect |
-| **2. VPN connected, but cannot reach resources** | Missing route or DNS setting, firewall rule, wrong permissions, split tunnel missing the internal subnet | `ipconfig /all` for the VPN adapter, `route print`, `ping` the internal server by IP, then by name |
-| **3. VPN keeps disconnecting** | Unstable internet or Wi-Fi, idle timeout, a firewall closing the connection, VPN client or driver problem | `ping -t` to check for packet loss, check the Wi-Fi signal, update the VPN client |
-| **4. Internet slow when the VPN is on** | Full tunnel, a busy VPN server, a weak home connection | Check the tunnel mode, test the speed with and without the VPN |
-| **5. Specific apps not working over the VPN** | The app's traffic is not routed through the tunnel, a blocked port, an app that needs internal DNS | Check the routes and DNS, and test the app's port with `Test-NetConnection <server> -Port <port>` |
 
----
-
-## 🔧 Useful Commands
-
-| Command | What it shows |
-|---------|---------------|
-| `ipconfig /all` | The VPN adapter, its IP address and DNS servers |
-| `route print` | The routes, including which networks go through the VPN |
-| `ping <internal server IP>` | Whether the internal network is reachable |
-| `nslookup <internal name>` | Whether internal names resolve through the VPN DNS |
-| `tracert <server>` | The path the traffic takes |
-| `Test-NetConnection <server> -Port <port>` | Whether a specific port is reachable |
 
 ---
 
