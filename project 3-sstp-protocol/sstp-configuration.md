@@ -1,8 +1,20 @@
-# SSTP VPN Configuration on Windows Server & Windows 11 Using a Self-Signed Certificate
+# 🔐 SSTP VPN Configuration on Windows Server and Windows 11 (Self-Signed Certificate)
 
-## Objective
+[ Back to Overview] → [README.md](https://github.com/seemasm20-source/Windows-Server-Azure-AD/blob/main/README.md)
 
-Configure a Secure Socket Tunneling Protocol (SSTP) VPN between an Azure-hosted Windows Server and a Windows 11 client using a self-signed certificate.
+---
+
+## 📋 Summary
+
+Configure a Secure Socket Tunneling Protocol (SSTP) VPN between the Azure-hosted Windows Server `server2021` and a Windows 11 client, using a self-signed certificate. The server runs Routing and Remote Access (RRAS), and the client uses the built-in Windows VPN.
+
+---
+
+## 💡 What is SSTP?
+
+SSTP carries the VPN tunnel inside an HTTPS (TLS) connection on **TCP port 443**. Most firewalls allow port 443, so SSTP works on hotel, café and public Wi-Fi networks. SSTP needs a **certificate on the server**, and the client must **trust** it.
+
+
 
 | Setting | Value |
 |---------|-------|
