@@ -1,7 +1,7 @@
 
 # 🔴 Troubleshooting: SSTP VPN Certificate Not Trusted
 
-[ Back to Overview] → [README](https://github.com/seemasm20-source/vpn-home-lab/blob/main/README.md)
+[ Back to README] → [README](https://github.com/seemasm20-source/vpn-home-lab/blob/main/README.md)
 ---
 
 ## 📋 Problem Summary
