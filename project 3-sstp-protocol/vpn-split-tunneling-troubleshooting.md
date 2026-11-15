@@ -20,8 +20,8 @@ By default, the Windows VPN client has **Use default gateway on remote network**
 |---------|-------|
 | **VPN connection** | `SSTP_VPN_LAB` (SSTP, TCP 443) |
 | **Setting involved** | Use default gateway on remote network |
-| **Ticked** | Full tunnel: all traffic goes through the VPN |
-| **Unticked** | Split tunnel: only traffic for the company network goes through the VPN |
+| **Checked** | Full tunnel: all traffic goes through the VPN |
+| **Unchecked** | Split tunnel: only traffic for the company network goes through the VPN |
 
 > This is most likely when you are connected to the client through RDP and start the VPN **from inside that RDP session**. See [Split Tunnel vs Full Tunnel](./split-vs-full-tunnel.md).
 
