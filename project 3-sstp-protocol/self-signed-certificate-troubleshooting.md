@@ -133,7 +133,7 @@ A successful SSTP connection needs more than an imported certificate. Certificat
 
 ## 💡 Next Step
 
-→ [Cannot Connect to VPN](./cannot-connect-vpn.md)
+→ [VPN Split Tunneling Troubleshooting](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/vpn-split-tunneling-troubleshooting.md)
 
 
 
