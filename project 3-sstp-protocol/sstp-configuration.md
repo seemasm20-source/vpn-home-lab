@@ -235,6 +235,13 @@ If permitted by the network configuration, test connectivity to an authorised in
 
 
 
+
+
+
+
+**Screenshot: VPN connection step by step:**
+
+
 <img width="1920" height="1080" alt="Screenshot (686)" src="https://github.com/user-attachments/assets/e3fb2d28-4936-4259-b7e3-1abf7739291b" />
 
 
