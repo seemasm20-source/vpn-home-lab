@@ -61,8 +61,6 @@ Press **Win + R**, type `ncpa.cpl` and press **Enter**. The VPN adapter is liste
 
 ---
 
-## 💡 Next Step
 
-→ [Cannot Connect to VPN](./cannot-connect-vpn.md)
 
 
