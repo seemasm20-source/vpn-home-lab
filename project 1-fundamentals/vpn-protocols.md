@@ -165,9 +165,7 @@ During connection establishment, the VPN server presents an SSL/TLS certificate 
 
 ---
 
-## 💡 Next Step
 
-→ [Cannot Connect to VPN](./cannot-connect-vpn.md)s
 
 
  
