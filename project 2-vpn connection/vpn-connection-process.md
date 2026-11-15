@@ -175,9 +175,7 @@ C:\> ping 10.0.0.10
 
 
 
-## 💡 Next Step
 
-→ [Cannot Connect to VPN](./cannot-connect-vpn.md)
    
    
    
