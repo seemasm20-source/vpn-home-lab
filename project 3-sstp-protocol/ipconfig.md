@@ -76,4 +76,4 @@ PPP adapter SSTP_VPN_LAB:
 
 ## 💡 Next Step
 
-→ [Cannot Connect to VPN](./cannot-connect-vpn.md)
+→ [Self-Signed Certificate Troubleshooting](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/self-signed-certificate-troubleshooting.md)
