@@ -154,9 +154,9 @@ The server is built in the [Windows Server on Azure](https://github.com/seemasm2
 | Microsoft Azure | Hosts the VPN server, with a network security group for TCP 443 |
 | Windows Server 2025 | VPN server with Routing and Remote Access (RRAS) |
 | Windows 11 | VPN client with the built-in VPN |
-| IIS Manager and PowerShell | Creating the self-signed certificate |
+| IIS Manager| Creating the self-signed certificate |
 | Active Directory Users and Computers | VPN user and dial-in permission |
-| Command Prompt and PowerShell | Checking the connection, adapter, routes and DNS |
+| Command Prompt  | Checking the connection, adapter, routes and DNS |
 
 ---
 
