@@ -66,9 +66,5 @@ Your PC
 ---
 
 
-## 💡 Next Step
-
-→ [Cannot Connect to VPN](./cannot-connect-vpn.md)
-
 
 
