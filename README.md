@@ -49,42 +49,9 @@ A VPN does four things:
 | **Creates a virtual adapter** | The VPN software adds a virtual network card to the PC |
 | **Routes company traffic** | Traffic for the company network goes through the tunnel |
 
----
 
-## 📁 Portfolio Structure
-
-| Topic | What it covers | Key Skills |
-|-------|----------------|------------|
-| **VPN Fundamentals** | What a VPN is, why it is used, key terms, common tickets | Explaining a VPN, split and full tunnel basics |
-| **VPN Components** | VPN client, VPN server, authentication server, VPN adapter | Knowing which component failed |
-| **VPN Types** | Remote access, site-to-site, client and clientless VPN | Choosing the right VPN type |
-| **VPN Protocols** | IKEv2/IPsec, SSL/TLS, OpenVPN, WireGuard, and others | Protocols, ports and firewall issues |
-| **VPN Authentication Methods** | Password, certificate, MFA, SSO, pre-shared key | Authentication faults and fixes |
-| **Split Tunnel vs Full Tunnel** | Which traffic uses the VPN | Slow internet and missing resources |
-| **VPN Adapter** | The virtual network card and how to read it | `ipconfig /all`, `route print`, DNS |
-| **VPN Connection Process** | The phases of a connection and where it can hang | Finding the failing step |
-| **SSTP VPN Configuration (hands-on lab)** | RRAS, certificate, address pool, Windows 11 client | Building and testing a working VPN |
 
 ---
-
-## 🗂️ Project Files
-
-| Topic | Description | File |
-|-------|-------------|------|
-| **VPN Fundamentals** | What is a VPN, why companies use it, key terms and common tickets | [VPN Fundamentals](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/what-is-vpn.md) |
-| **VPN Components** | The four components of a VPN connection | [VPN Fundamentals](./vpn-fundamentals.md) |
-| **VPN Types** | Remote access, site-to-site, client and clientless | [VPN Types](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/vpn-types.md) |
-| **VPN Protocols** | IKEv2/IPsec, SSL/TLS, OpenVPN, WireGuard, ports and common issues | [VPN Protocols](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/vpn-protocols.md) |
-| **VPN Authentication Methods** | Password, certificate, MFA, SSO and pre-shared key | [VPN Authentication Methods](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/authentication-methods.md) |
-| **Split Tunnel vs Full Tunnel** | What goes through the VPN and what does not | [Split Tunnel vs Full Tunnel](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/split-vs-full-tunnel.md) |
-| **VPN Adapter** | Finding and troubleshooting the VPN adapter | [VPN Adapters](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/vpn-adapters.md)|
-| **VPN Connection Process** | Phases, connection states and where a connection hangs |[VPN Connection Process](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/vpn-connection-process.md) |
-| **SSTP VPN Configuration** | Hands-on lab on Azure with a self-signed certificate | [SSTP VPN Configuration](./sstp-vpn-configuration.md) |
-
----
-
-
-
 
 
 
