@@ -101,7 +101,7 @@ A VPN does four things:
 | **Split Tunnel vs Full Tunnel** | What goes through the VPN and what does not | [Split Tunnel vs Full Tunnel](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/split-vs-full-tunnel.md) |
 | **VPN Adapter** | Finding and troubleshooting the VPN adapter | [VPN Adapters](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/vpn-adapters.md) |
 | **VPN Connection Process** | Phases, connection states and where a connection hangs | [VPN Connection Process](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/vpn-connection-process.md) |
-| **SSTP VPN Configuration** | Hands-on lab on Azure with a self-signed certificate | [SSTP VPN Configuration](./sstp-vpn-configuration.md) |
+| **SSTP VPN Configuration** | Hands-on lab on Azure with a self-signed certificate | [[SSTP VPN Configuration](./sstp-vpn-configuration.md)](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/sstp-configuration.md) |
 | **VPN Diagnostic: ipconfig** | Reading the VPN adapter, IP address and DNS after a connection | [VPN Diagnostic - ipconfig](https://github.com/seemasm20-source/vpn-home-lab/blob/main/FOLDER-NAME/FILE-NAME.md) |
 | **Troubleshooting: Self-Signed Certificate** | SSTP fails because the client does not trust the self-signed certificate | [Certificate Not Trusted](https://github.com/seemasm20-source/vpn-home-lab/blob/main/FOLDER-NAME/FILE-NAME.md) |
 | **Troubleshooting: VPN Split Tunneling** | RDP drops when the SSTP VPN connects, fixed by turning on split tunneling | [Split Tunneling Fix](https://github.com/seemasm20-source/vpn-home-lab/blob/main/FOLDER-NAME/FILE-NAME.md) |
