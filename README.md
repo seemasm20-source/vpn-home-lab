@@ -73,7 +73,7 @@ A VPN does four things:
 |-------|-------------|------|
 | **VPN Fundamentals** | What is a VPN, why companies use it, key terms and common tickets | [VPN Fundamentals](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/what-is-vpn.md) |
 | **VPN Components** | The four components of a VPN connection | [VPN Fundamentals](./vpn-fundamentals.md) |
-| **VPN Types** | Remote access, site-to-site, client and clientless | [VPN Types](./vpn-types.md) |
+| **VPN Types** | Remote access, site-to-site, client and clientless | [VPN Types](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/vpn-types.md) |
 | **VPN Protocols** | IKEv2/IPsec, SSL/TLS, OpenVPN, WireGuard, ports and common issues | [VPN Protocols](./vpn-protocols.md) |
 | **VPN Authentication Methods** | Password, certificate, MFA, SSO and pre-shared key | [VPN Authentication Methods](./vpn-authentication.md) |
 | **Split Tunnel vs Full Tunnel** | What goes through the VPN and what does not | [Split Tunnel vs Full Tunnel](./split-vs-full-tunnel.md) |
