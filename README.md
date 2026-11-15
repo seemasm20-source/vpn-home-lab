@@ -78,7 +78,7 @@ A VPN does four things:
 | **VPN Authentication Methods** | Password, certificate, MFA, SSO and pre-shared key | [VPN Authentication Methods](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/authentication-methods.md) |
 | **Split Tunnel vs Full Tunnel** | What goes through the VPN and what does not | [Split Tunnel vs Full Tunnel](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/split-vs-full-tunnel.md) |
 | **VPN Adapter** | Finding and troubleshooting the VPN adapter | [VPN Adapters](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/vpn-adapters.md)|
-| **VPN Connection Process** | Phases, connection states and where a connection hangs | [VPN Connection Process](./vpn-connection-process.md) |
+| **VPN Connection Process** | Phases, connection states and where a connection hangs |[VPN Connection Process](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/vpn-connection-process.md) |
 | **SSTP VPN Configuration** | Hands-on lab on Azure with a self-signed certificate | [SSTP VPN Configuration](./sstp-vpn-configuration.md) |
 
 ---
