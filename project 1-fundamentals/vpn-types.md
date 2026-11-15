@@ -114,9 +114,7 @@ For details on each protocol, see [VPN Protocols](./vpn-protocols.md).
 
 ---
 
-## 💡 Next Step
 
-→ [VPN Protocols](./vpn-protocols.md)
  
  
  
