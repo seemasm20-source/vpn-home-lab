@@ -76,7 +76,7 @@ A VPN does four things:
 | **VPN Types** | Remote access, site-to-site, client and clientless | [VPN Types](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/vpn-types.md) |
 | **VPN Protocols** | IKEv2/IPsec, SSL/TLS, OpenVPN, WireGuard, ports and common issues | [VPN Protocols](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/vpn-protocols.md) |
 | **VPN Authentication Methods** | Password, certificate, MFA, SSO and pre-shared key | [VPN Authentication Methods](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/authentication-methods.md) |
-| **Split Tunnel vs Full Tunnel** | What goes through the VPN and what does not | [Split Tunnel vs Full Tunnel](./split-vs-full-tunnel.md) |
+| **Split Tunnel vs Full Tunnel** | What goes through the VPN and what does not | [Split Tunnel vs Full Tunnel](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/split-vs-full-tunnel.md) |
 | **VPN Adapter** | Finding and troubleshooting the VPN adapter | [What is a VPN Adapter?](./vpn-adapter.md) |
 | **VPN Connection Process** | Phases, connection states and where a connection hangs | [VPN Connection Process](./vpn-connection-process.md) |
 | **SSTP VPN Configuration** | Hands-on lab on Azure with a self-signed certificate | [SSTP VPN Configuration](./sstp-vpn-configuration.md) |
