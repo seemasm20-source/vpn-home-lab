@@ -83,6 +83,31 @@ A VPN does four things:
 
 ---
 
+
+
+
+
+
+
+## 🗂️ Project Files
+
+| Topic | Description | File |
+|-------|-------------|------|
+| **VPN Fundamentals** | What is a VPN, why companies use it, key terms and common tickets | [VPN Fundamentals](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/what-is-vpn.md) |
+| **VPN Components** | The four components of a VPN connection | [VPN Fundamentals](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/what-is-vpn.md) |
+| **VPN Types** | Remote access, site-to-site, client and clientless | [VPN Types](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/vpn-types.md) |
+| **VPN Protocols** | IKEv2/IPsec, SSL/TLS, OpenVPN, WireGuard, ports and common issues | [VPN Protocols](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%201-fundamentals/vpn-protocols.md) |
+| **VPN Authentication Methods** | Password, certificate, MFA, SSO and pre-shared key | [VPN Authentication Methods](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/authentication-methods.md) |
+| **Split Tunnel vs Full Tunnel** | What goes through the VPN and what does not | [Split Tunnel vs Full Tunnel](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/split-vs-full-tunnel.md) |
+| **VPN Adapter** | Finding and troubleshooting the VPN adapter | [VPN Adapters](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/vpn-adapters.md) |
+| **VPN Connection Process** | Phases, connection states and where a connection hangs | [VPN Connection Process](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%202-vpn%20connection/vpn-connection-process.md) |
+| **SSTP VPN Configuration** | Hands-on lab on Azure with a self-signed certificate | [SSTP VPN Configuration](./sstp-vpn-configuration.md) |
+| **VPN Diagnostic: ipconfig** | Reading the VPN adapter, IP address and DNS after a connection | [VPN Diagnostic - ipconfig](https://github.com/seemasm20-source/vpn-home-lab/blob/main/FOLDER-NAME/FILE-NAME.md) |
+| **Troubleshooting: Self-Signed Certificate** | SSTP fails because the client does not trust the self-signed certificate | [Certificate Not Trusted](https://github.com/seemasm20-source/vpn-home-lab/blob/main/FOLDER-NAME/FILE-NAME.md) |
+| **Troubleshooting: VPN Split Tunneling** | RDP drops when the SSTP VPN connects, fixed by turning on split tunneling | [Split Tunneling Fix](https://github.com/seemasm20-source/vpn-home-lab/blob/main/FOLDER-NAME/FILE-NAME.md) |
+
+
+
 ## 🧪 Hands-On Lab - SSTP VPN
 
 | Setting | Value |
