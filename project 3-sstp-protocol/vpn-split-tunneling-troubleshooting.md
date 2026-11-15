@@ -2,7 +2,7 @@
 
 # 🔴 Troubleshooting: RDP Disconnects Immediately After SSTP VPN Connection
 
-[ Back to Overview] → [README.md](./README.md)
+[ Back to README] → [README](https://github.com/seemasm20-source/vpn-home-lab/blob/main/README.md)
 
 ---
 
