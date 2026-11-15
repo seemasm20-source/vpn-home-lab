@@ -118,9 +118,6 @@ When a user says "VPN authentication failed", find out which method is in use fi
 
 ---
 
-## 💡 Next Step
-
-→ [Cannot Connect to VPN](./cannot-connect-vpn.md)
 
 
 
