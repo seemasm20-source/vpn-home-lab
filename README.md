@@ -109,17 +109,17 @@ The server is built in the [Windows Server on Azure](https://github.com/seemasm2
 
 ## 🎯 VPN Troubleshooting Matrix
 
-| Ticket | Likely causes | What to check | Topic |
-|--------|---------------|---------------|-------|
-| **Cannot connect to the VPN** | No internet, blocked ports, wrong server name, bad credentials, locked account, expired MFA, certificate error | `ping 8.8.8.8`, `nslookup` the VPN name, `Test-NetConnection -Port 443`, the account in ADUC | [VPN Connection Process](./vpn-connection-process.md) |
-| **Hangs at "Connecting"** | The VPN server is unreachable, a firewall blocks the port, the name does not resolve | DNS, the port and another network | [VPN Connection Process](./vpn-connection-process.md) |
-| **Hangs at "Authenticating"** | Wrong credentials, locked or disabled account, MFA problem, certificate problem | The account, the MFA status and the time on the device | [VPN Authentication Methods](./vpn-authentication.md) |
-| **Certificate error** | The client does not trust the certificate, or the name does not match | Trusted Root store, the certificate's DNS name (SAN) and expiry date | [SSTP VPN Configuration](./sstp-vpn-configuration.md) |
-| **VPN connected, but cannot reach resources** | Missing route, wrong DNS, firewall or permissions | `ipconfig /all`, `route print`, `nslookup`, `ping` by IP and then by name | [VPN Adapter](./vpn-adapter.md) |
-| **VPN keeps disconnecting** | Unstable internet or Wi-Fi, idle timeout, a firewall closing the connection, client problem | `ping -t` to check for packet loss, update the VPN client | [VPN Connection Process](./vpn-connection-process.md) |
-| **Internet slow when the VPN is on** | Full tunnel, a busy VPN server, a weak connection | The tunnel mode, and speed with and without the VPN | [Split Tunnel vs Full Tunnel](./split-vs-full-tunnel.md) |
-| **Specific apps not working over the VPN** | The app's traffic is not routed through the tunnel, a blocked port, internal DNS needed | Routes and DNS, `Test-NetConnection -Port <port>` | [Split Tunnel vs Full Tunnel](./split-vs-full-tunnel.md) |
-| **Error 691** | Wrong credentials, or the account is not allowed to connect | The account status, the **Dial-in** tab and the RRAS settings | [VPN Connection Process](./vpn-connection-process.md) |
+| Ticket | Likely causes | What to check |
+|--------|---------------|---------------|
+| **Cannot connect to the VPN** | No internet, blocked ports, wrong server name, bad credentials, locked account, expired MFA, certificate error | `ping 8.8.8.8`, `nslookup` the VPN name, `Test-NetConnection -Port 443`, the account in ADUC |
+| **Hangs at "Connecting"** | The VPN server is unreachable, a firewall blocks the port, the name does not resolve | DNS, the port and another network |
+| **Hangs at "Authenticating"** | Wrong credentials, locked or disabled account, MFA problem, certificate problem | The account, the MFA status and the time on the device |
+| **Certificate error** | The client does not trust the certificate, or the name does not match | Trusted Root store, the certificate's DNS name (SAN) and expiry date |
+| **VPN connected, but cannot reach resources** | Missing route, wrong DNS, firewall or permissions | `ipconfig /all`, `route print`, `nslookup`, `ping` by IP and then by name |
+| **VPN keeps disconnecting** | Unstable internet or Wi-Fi, idle timeout, a firewall closing the connection, client problem | `ping -t` to check for packet loss, update the VPN client |
+| **Internet slow when the VPN is on** | Full tunnel, a busy VPN server, a weak connection | The tunnel mode, and speed with and without the VPN |
+| **Specific apps not working over the VPN** | The app's traffic is not routed through the tunnel, a blocked port, internal DNS needed | Routes and DNS, `Test-NetConnection -Port <port>` |
+| **Error 691** | Wrong credentials, or the account is not allowed to connect | The account status, the **Dial-in** tab and the RRAS settings |
 
 ---
 
