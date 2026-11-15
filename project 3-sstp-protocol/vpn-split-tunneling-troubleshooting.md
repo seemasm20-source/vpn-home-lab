@@ -73,24 +73,10 @@ You can also read the setting itself in the next step: if **Use default gateway 
 3. Check that the RDP session stays connected.
 4. Check access to the company resources you need.
 
-### Same Fix with PowerShell
-
-```text
-PS C:\> Set-VpnConnection -Name "SSTP_VPN_LAB" -SplitTunneling $True
-PS C:\> Get-VpnConnection -Name "SSTP_VPN_LAB" | Select-Object Name, SplitTunneling
-```
 
 `SplitTunneling : True` means the setting is changed.
 
-### Routes for the Company Network
 
-With split tunneling, only traffic with a route through the VPN uses the tunnel. Windows adds a route for the VPN's own address range, which is `10.0.0.0/8` here. Check it in `route print`, and add a route if the company network you need is not covered:
-
-```text
-PS C:\> Add-VpnConnectionRoute -ConnectionName "SSTP_VPN_LAB" -DestinationPrefix "<company network>/<prefix>"
-```
-
-> Windows may add this automatic route for the whole `10.0.0.0/8` range, which can also catch other `10.x` addresses, such as an Azure virtual network that uses `10.x` addresses. Check `route print` if some addresses stop working. The **Advanced TCP/IP Settings** dialog has an option to turn off the automatic route (**Disable class based route addition**).
 
 ---
 
@@ -130,6 +116,12 @@ Split tunneling means internet traffic is **not** sent through the company. A de
 **Screenshot: Advanced TCP/IP Settings with the default gateway option:**
 
 <img width="1920" height="1080" alt="Advanced TCP/IP Settings with Use default gateway on remote network unticked" src="https://github.com/user-attachments/assets/8872f909-130a-401b-afe0-977f73890999" />
+
+
+
+<img width="2067" height="2067" alt="05A95E82-70B5-4047-997B-A4B94D5477C6" src="https://github.com/user-attachments/assets/86a47738-cb93-4d61-8b6e-b54d2ef53511" />
+
+
 
 **Screenshot: VPN connected while the RDP session stays active:**
 
@@ -176,68 +168,7 @@ Split tunneling means internet traffic is **not** sent through the company. A de
 
 
 
-------------------OLD
 
-
-
-
-# Troubleshooting: RDP Disconnects immediately after SSTP VPN Connection
-
-## Problem Summary
-
-  The Remote Desktop Protocol (RDP) session freezes or disconnects immediately after the SSTP VPN status changes to **Connected**.
-
-**Possible Cause:** The VPN connection is configured to use the remote network's default gateway. This can change the client's network routing and interrupt the existing RDP connection.
-
-## Resolution: Enable Split Tunneling
-
-### Step 1: Open Network Connections
-
-1. Press `Windows + R`.
-2. Type `ncpa.cpl` and press **Enter**.
-3. Locate the SSTP VPN connection.
-
-### Step 2: Open VPN Properties
-
-1. Right-click the SSTP VPN connection.
-2. Select **Properties**.
-3. Open the **Networking** tab.
-4. Select **Internet Protocol Version 4 (TCP/IPv4)**.
-5. Click **Properties**.
-
-### Step 3: Change Advanced TCP/IP Settings
-
-1. Click **Advanced**.
-2. Under **IP Settings**, locate **Default gateways**.
-3. Uncheck **Use default gateway on remote network**.
-4. Click **OK** to close each dialog box and save the changes.
-
-### Step 4: Reconnect and Test
-
-1. Disconnect the SSTP VPN.
-2. Reconnect to the VPN.
-3. Check whether the RDP session remains connected.
-4. Verify access to the required remote resources.
-
-## Expected Result
-
-* The VPN connects successfully.
-* The client continues using its local default gateway for general internet traffic.
-* Traffic for remote networks can use the VPN when the appropriate routes exist.
-* The RDP session remains connected, provided its network route is not otherwise interrupted.
-
-
-
-
-<img width="1920" height="1080" alt="Screenshot (710)" src="https://github.com/user-attachments/assets/8872f909-130a-401b-afe0-977f73890999" />
-
-
-
-
-
-
-
-<img width="2268" height="4032" alt="IMG_0552" src="https://github.com/user-attachments/assets/926547f9-e2b9-4103-ab54-29bfaadaba3e" />
 
 
 
