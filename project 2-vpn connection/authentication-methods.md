@@ -1,6 +1,9 @@
 
 # 🔑 VPN Authentication Methods
 
+
+[ Back to README] → [README](https://github.com/seemasm20-source/vpn-home-lab/blob/main/README.md)
+
 Authentication is how the VPN server confirms who is connecting. The method decides how secure the VPN is, and it also decides what a technician checks when a user cannot connect.
 
 ---
