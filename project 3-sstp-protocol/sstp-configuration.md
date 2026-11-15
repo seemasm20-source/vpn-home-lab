@@ -742,4 +742,14 @@ If permitted by the network configuration, test connectivity to an authorised in
 
 
 
-|[VPN Diagnostic – IP Configuration (ipconfig)](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/ipconfig.md) |
+---
+
+## 💡 Next Step
+
+→ |[VPN Diagnostic – IP Configuration (ipconfig)](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/ipconfig.md) |
+
+
+
+
+
+
