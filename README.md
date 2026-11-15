@@ -104,7 +104,7 @@ A VPN does four things:
 | **SSTP VPN Configuration** | Hands-on lab on Azure with a self-signed certificate | [[SSTP VPN Configuration](./sstp-vpn-configuration.md)](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/sstp-configuration.md) |
 | **VPN Diagnostic: ipconfig** | Reading the VPN adapter, IP address and DNS after a connection |[VPN Diagnostic – IP Configuration (ipconfig)](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/ipconfig.md) |
 | **Troubleshooting: Self-Signed Certificate** | SSTP fails because the client does not trust the self-signed certificate | [Self-Signed Certificate Troubleshooting](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/self-signed-certificate-troubleshooting.md)|
-| **Troubleshooting: VPN Split Tunneling** | RDP drops when the SSTP VPN connects, fixed by turning on split tunneling | [Split Tunneling Fix](https://github.com/seemasm20-source/vpn-home-lab/blob/main/FOLDER-NAME/FILE-NAME.md) |
+| **Troubleshooting: VPN Split Tunneling** | RDP drops when the SSTP VPN connects, fixed by turning on split tunneling | [VPN Split Tunneling Troubleshooting](https://github.com/seemasm20-source/vpn-home-lab/blob/main/project%203-sstp-protocol/vpn-split-tunneling-troubleshooting.md) |
 
 
 
