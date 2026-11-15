@@ -1,6 +1,6 @@
 # 🔐 SSTP VPN Configuration on Windows Server and Windows 11 (Self-Signed Certificate)
 
-[ Back to Overview] → [README.md](https://github.com/seemasm20-source/Windows-Server-Azure-AD/blob/main/README.md)
+[ Back to README] → [README](https://github.com/seemasm20-source/vpn-home-lab/blob/main/README.md)
 
 ---
 
